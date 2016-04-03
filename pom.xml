@@ -4,7 +4,7 @@
   <artifactId>stt-comparison</artifactId>
   <version>0.0.1</version>
   <name>${project.artifactId}</name>
-  <description>My wonderfull scala app</description>
+  <description>An application for testing various STT services</description>
   <inceptionYear>2015</inceptionYear>
   <licenses>
     <license>
@@ -28,26 +28,6 @@
       <artifactId>scala-library</artifactId>
       <version>${scala.version}</version>
     </dependency>
-
-    <!-- Test -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.specs2</groupId>
-      <artifactId>specs2-core_${scala.compat.version}</artifactId>
-      <version>2.4.16</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.scalatest</groupId>
-      <artifactId>scalatest_${scala.compat.version}</artifactId>
-      <version>2.2.4</version>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
 
   <build>
@@ -67,7 +47,6 @@
             </goals>
             <configuration>
               <args>
-                <arg>-make:transitive</arg>
                 <arg>-dependencyfile</arg>
                 <arg>${project.build.directory}/.scala_dependencies</arg>
               </args>
