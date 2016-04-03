@@ -1,0 +1,1 @@
+These files were taken from the [Open Speech Repository](http://www.voiptroubleshooter.com/open_speech/american.html).
