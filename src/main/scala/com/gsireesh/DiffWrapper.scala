@@ -3,7 +3,7 @@ package com.gsireesh
 import difflib.{DiffUtils, Patch}
 
 import scala.collection.JavaConverters._
-import scala.collection.mutable.MutableList
+import scala.collection.mutable
 
 /**
   * Created by sireesh on 5/8/16.
@@ -14,7 +14,7 @@ object DiffWrapper {
     val patch: Patch[String] = DiffUtils.diff(expected.split(' ').toSeq.asJava, actual.split(' ').toSeq.asJava)
     var oldIndex = 0
     val actualArray = actual.split(' ')
-    val actualArrayColored = new MutableList[String]
+    val actualArrayColored = new mutable.MutableList[String]
     for (delta <- patch.getDeltas.asScala) {
       actualArray.slice(oldIndex, delta.getRevised.getPosition).foreach(a => actualArrayColored += (Console.GREEN + a))
       delta.getRevised.getLines.asScala.foreach(a => actualArrayColored += (Console.RED + a))
