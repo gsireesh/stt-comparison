@@ -14,10 +14,10 @@ object App {
     val speechSource = new SpeechSourceWashington("src/main/resources/Washington_speech_files")
     val watsonStt = new WatsonSttService(config("username"), config("password"))
 
-    for ((audio, expectedResponse) <- speechSource.getSpeechFiles().take(2)) {
-      val watsonResponse = watsonStt.transcribe(audio).map(_.toLowerCase).head
-      val comparedResults = DiffWrapper.getPrintableDiff(expectedResponse.toLowerCase, watsonResponse.toLowerCase)
-      println(comparedResults)
+    for ((audio, expectedResponse) <- speechSource.getSpeechFiles().take(1)) {
+      val watsonResponse = "keep the hatch tight on the watch constant"//watsonStt.transcribe(audio).map(_.toLowerCase).head
+      val (wer,comparedResults) = DiffWrapper.getWerAndPrintableDiff(expectedResponse.toLowerCase, watsonResponse.toLowerCase)
+      println(s"$comparedResults\nWord Error Rate: $wer")
     }
   }
 
