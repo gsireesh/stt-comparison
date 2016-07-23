@@ -38,4 +38,4 @@ build.log
 #  ^\.pc/
 
 #speech binary files
-resources/Washington_speech_files
+src/main/resources/Washington_speech_files
