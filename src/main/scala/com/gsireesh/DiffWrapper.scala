@@ -4,8 +4,7 @@ package com.gsireesh
 import com.gsireesh.diffmatchpatch.DiffMatchPatch
 
 import scala.collection.JavaConverters._
-import java.util.LinkedList
-import DiffMatchPatch.{Diff, Operation}
+import com.gsireesh.diffmatchpatch.DiffMatchPatch.{Diff, Operation}
 /**
   * Created by sireesh on 5/8/16.
   */
