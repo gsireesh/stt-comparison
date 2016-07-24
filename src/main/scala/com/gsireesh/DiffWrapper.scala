@@ -1,10 +1,10 @@
 package com.gsireesh
 
 
-import com.gsireesh.diffmatchpatch.DiffMatchPatch
+import com.google.diffmatchpatch.DiffMatchPatch
+import com.google.diffmatchpatch.DiffMatchPatch.{Operation, Diff}
 
 import scala.collection.JavaConverters._
-import com.gsireesh.diffmatchpatch.DiffMatchPatch.{Diff, Operation}
 /**
   * Created by sireesh on 5/8/16.
   */

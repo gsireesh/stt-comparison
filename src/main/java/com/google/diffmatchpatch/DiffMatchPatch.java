@@ -21,7 +21,7 @@
  * THIS FILE HAS BEEN MODIFIED FROM ITS ORIGINAL FORM.
  */
 
-package com.gsireesh.diffmatchpatch;
+package com.google.diffmatchpatch;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
