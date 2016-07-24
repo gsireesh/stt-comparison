@@ -16,5 +16,5 @@ Currently, the `App` object takes the first sentence from the corpus and runs th
 - Set up an account on bluemix and an instance of the Watson STT service
 - Create a valid `config.properties` file - rename config.properties.example, and supply a username and password for the Watson services, after having set them up to be used.
 - run the `get_audio_files` script to pull down the audio files used for measurement.
-- run a Maven build to pull down dependencies and compile
-- run `scala App`
+- run a Maven build (`mvn install`) to pull down dependencies and compile
+- run `mvn exec:java`
